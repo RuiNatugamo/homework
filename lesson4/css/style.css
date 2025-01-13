@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.one {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.two {
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+.three {
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.four  {
+    color: rgb(255, 109, 109);
+    word-spacing: 30px;
+    text-decoration: overline wavy;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.five {
+    letter-spacing: 5px;
+    font-size: 18px;
+    text-decoration: double underline;
+    font-weight: bold;
+}
