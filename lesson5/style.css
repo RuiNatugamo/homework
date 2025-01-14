@@ -6,14 +6,14 @@ body {
     background-color: #191920;
     color: #fff;
     padding: 10px 70px;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 .contaier {
     display: grid;
-    grid-template-columns: repeat(4, 500px);
+    grid-template-columns: repeat(4, 400px);
     background-color: #202525;
-    max-height: 700px;
+    max-height: 600px;
     overflow: auto;
     margin-top: 100px;
     padding: 40px;
