@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191920;
+    color: #fff;
+    padding: 10px 70px;
+    font-size: 22px;
+}
+
+.contaier {
+    display: grid;
+    grid-template-columns: repeat(4, 500px);
+    background-color: #202525;
+    max-height: 700px;
+    overflow: auto;
+    margin-top: 100px;
+    padding: 40px;
+    border-radius: 8px;
+    border: 3px solid #999999;
+    box-shadow: 0 0 10px 4px #ffffff3f;
+}
+
+.block  {
+    background-color: #4a6454;
+    padding: 10px 30px;
+    margin: 15px;
+    border-radius: 6px;
+    border: 2px solid #ffe07b;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.315);
+}
