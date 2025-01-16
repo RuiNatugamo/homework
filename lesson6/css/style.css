@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #04020c;
+    color: #fff;
+    line-height: 150%;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 22px;
+}
+.header .navbar {
+    display: flex;
+}
+.header .navbar ul {
+    display: flex;
+}
+.header .navbar ul li {
+    list-style: none;
+}
+.header .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+}
+.header .navbar .btn {
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+.section-one {
+    background: url(../img/Terror.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-height: 800px;
+    display: flex;
+    padding: 200px 0 250px ;
+    justify-content: center;
+    margin-bottom: 130px;
+}
+.section-one .main h1 {
+    text-align: center;
+    margin-bottom: 90px;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+.section-one .main .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+}
+.section-one .main .content .info {
+    margin-top: 30px;
+    width: 500px;
+}
+.section-one .main .content .info p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #d6d6d6;
+}
+.section-one .main .content .info span {
+    color: #ffcb90;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.section-one .main .content .buttons {
+    display: flex;
+    flex-direction: column;
+}
+.section-one .main .content .buttons .btn-one {
+    background: linear-gradient(90deg,#ffd89f 40%, #f8ffb7);
+    box-shadow: 0 0 10px 3px #ffd99f67;
+    padding: 12px 90px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.section-one .main .content .buttons .btn-two {
+    background: linear-gradient(90deg,#ffd89f 40%, #f8ffb7);
+    box-shadow: 0 0 10px 3px #ffd99f67;
+    padding: 12px 90px;
+    border-radius: 4px;
+}
+.section-one .main .content .buttons a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+.section-one .main .main-end {
+    text-align: center; 
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.section-two {
+    display: flex;
+}
+.section-two .other {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+}
+.section-two .other .block-one h2 {
+    text-align: center;
+    font-size: 43px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.section-two .other .block-one  p {
+    text-align: center;
+    margin-top: 10px;
+    color: #ccc;
+}
+.section-two .other .block-one {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+}
+.section-two .other .grid-container {
+    display: flex;
+}
+.section-two .other .grid-block {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    margin-top: 50px;
+    text-align: center;
+    justify-content: center;
+}
+.section-two .other .grid-block .grid {
+    background-color: #6b84f3;
+    margin: 12px;
+    padding: 30px 0;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px #7489e7;
+}
+.section-two .other .grid-block .grid h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.section-two .other .grid-block .grid p {
+    padding: 0 30px;
+    margin-top: 10px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.section-two .other .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.section-two .other .btn .other-btn {
+    background: linear-gradient(360deg, #6b84f3 , #87bfff);
+
+    padding: 10px 150px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px #7489e7;
+}
+.section-two .other .btn a.other-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+
+footer {
+    border-top: 2px solid #1a1a1a;
+    margin-top: 150px;
+}
+.footer {
+    display: flex;
+    width: 1500px;
+    margin: 0 auto;
+    justify-content: center;;
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+.footer p {
+    color: #b8b8b8;
+}
+.footer .info {
+    max-width: 500px;
+    margin-right: 200px;
+}
+.footer .contacts {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+.footer .contacts h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.footer .contacts a {
+    text-decoration: none;
+    color: #c0c0c0;
+    margin-top: 10px;
+}
