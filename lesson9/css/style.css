@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #222;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.grid .container {
+    color: #fff;
+    padding: 40px 100px;
+}
+
+.grid__items {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.grid__items .item {
+    text-align: center;
+    background-color: #111;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.grid__items .item h2 {
+    font-size: 30px;
+    color: #ff7777;
+    margin-bottom: 0PX;
+    font-weight: bold;
+}
+
+.grid__items .item P {
+    color: #ccc;
+    margin-top: 30px;
+}
+
+.grid__items-2 {
+    display: grid;
+    grid-template-columns: 300px 400px 300px 500px;
+}
+
+.grid__items-2 .item h2 {
+    color: #ffa977;
+}
+
+.grid__items-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(1, 260px);
+}
+
+.grid__items-3 .item {
+    position: relative;
+}
+
+.grid__items-3 .item h2 {
+    color: #9eff77;
+}
+
+.item .item__subtitle {
+   color: #616161;
+   text-transform: uppercase;
+   font-size: 14px;
+   margin-top: 10px;
+   font-weight: bold;
+}
+
+
+
+:root {
+    --bd-radius: 10px;
+    --accent-color: #4de298;
+}
+
+.variables .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.variables__itmes {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent-color);
+    color: #fff;
+    max-width: 800px;
+    padding: 50px 10px;
+    border-radius: var(--bd-radius);
+}
+
+
+.variables__title {
+    color: #222;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+} 
+
+.variables__text {
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: var(--bd-radius);
+    color: #ccc;
+    line-height: 2.1vh;
+    font-size: 18px;
+}
+
+.variables__more {
+   text-align: center;
+   background-color: var(--accent-color);
+   padding: 10px;
+   color: #222;
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 19px;
+   cursor: pointer;
+   
+}
+
+.variables__info {
+    background-color: #222;
+    border-radius: var(--bd-radius);
+    padding: 40px 20px;
+    justify-content: center;
+}
