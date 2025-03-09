@@ -361,6 +361,174 @@
 
 /* ///////////////////////////////////////////////////////////////////////////////////////// */
 
+
+.testimonials {
+    
+}
+
+.testimonials__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+
+.testimonials__title {
+    margin-bottom: 20px;
+}
+
+.testimonials__info {
+    max-width: 632px;
+}
+
+.testimonials__nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-family: 'Gabriola';
+}
+
+.testimonials__prev,
+.testimonials__next {
+    cursor: pointer;
+    background: transparent;
+    border: 1.5px solid var(--accent-color);
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.swiper-button-disabled.testimonials__prev,
+.swiper-button-disabled.testimonials__next {
+    border-color: #E1D9E1;
+    cursor: auto;
+}
+
+.swiper-button-disabled.testimonials__prev:hover,
+.swiper-button-disabled.testimonials__next:hover {
+    background: transparent;
+}
+
+.swiper-button-disabled.testimonials__prev:hover path,    
+.swiper-button-disabled.testimonials__next:hover path {
+    fill: #E1D9E1;
+}    
+
+.swiper-button-disabled.testimonials__prev path,
+.swiper-button-disabled.testimonials__next path {
+    fill: #E1D9E1;
+}
+
+.gallerytestimonials_prev path,
+.testimonials__next path {
+    transition: 0.3s ease;
+}
+
+.testimonials__prev:hover,
+.testimonials__next:hover {
+    background-color: var(--accent-color);
+}
+
+.testimonials__prev:hover path,
+.testimonials__next:hover path {
+    fill: var(--general-background);
+}
+
+.testimonials__slider {
+    overflow: visible;
+}
+
+.testimonials__slide  {
+    background-color: var(--accent-background);
+    border-radius: var(--border-radius);
+    padding: 30px 30px 40px;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s ease;
+    opacity: 0.5;
+    height: auto;
+}
+
+.testimonials__slide.swiper-slide {
+    transform: scale(0.9);
+
+}
+
+.swiper-slide-active.testimonials__slide {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.testimonials__student-img {
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.testimonials__student-img img {
+    width: 100%;
+}
+
+.testimonials__student {
+   text-align: center;
+    max-width: 165px;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.testimonials__student-name {
+    text-transform: uppercase;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    color: var(--accent-text);
+}
+
+.testimonials__student-inst {
+    color: #CEAAD0;
+}
+
+.testimonials__wrapper {
+    margin-bottom: 40px;
+}
+
+
+.testimonials__qoute span {
+    display: block;
+    font-family: 'Gabriola';
+    font-size: 30px;
+    line-height: 0.9;
+    margin-bottom: 10px;
+    color: var(--accent-text);
+}
+
+.testimonials__scrollbar {
+    background-color: var(--accent-background);
+   
+}
+
+.testimonials__scrollbar .swiper-scrollbar-drag {
+    background-color: var(--accent-color);
+    ;
+}
+
+.testimonials__scrollbar.swiper-scrollbar {
+    position: static;
+    width: 100%; 
+    height: 6px;
+}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
+
 .gallery {
 
 }
@@ -621,6 +789,11 @@
         max-width: none;
     }
 
+    .testimonials__scrollbar.swiper-scrollbar {
+        margin: 0 auto;
+        width: 70%;
+    }
+
 }
 
 @media (max-width: 800px) {
@@ -696,6 +869,14 @@
         bottom: 80px;
     }
 
+    .testimonials__inner {
+     flex-direction: column;
+     align-items: stretch;
+    }
+
+    .testimonials__nav {
+        align-self: flex-end;
+    }
 }
 
 @media (max-width: 600px) {
@@ -793,6 +974,21 @@
 
     .gallery__content {
        text-align: center;
+    }
+
+    .testimonials__scrollbar.swiper-scrollbar {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .testimonials__inner {
+        margin-bottom: 20px;
+    }
+
+    .testimonials__slide {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
