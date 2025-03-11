@@ -157,6 +157,7 @@
     spaceBetween: 0,
     slidesPerView: 1,
     centeredSlides: true,
+    initialSlide: 1,
 
     navigation: {
       nextEl: '.testimonials__next',
@@ -181,6 +182,13 @@
     }
 
   });
+
+  // Телефон 
+
+  const telInputs = document.querySelectorAll('input[type="tel"]')
+  const im = new Inputmask('+7 (999) 999-99-99')
+  im.mask(telInputs)
+  
 
 })()
 

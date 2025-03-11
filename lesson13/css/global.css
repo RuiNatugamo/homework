@@ -5,6 +5,7 @@
     --accent-background: #FFE0CB;
     --accent-text: #1F1711;
     --border-radius: 20px;
+    --input-color: #AC907A;
 }
 
 body { 
@@ -165,7 +166,7 @@ body {
 }
 
 .field__input {
-    border: 1px solid #AC907A;
+    border: 1px solid var(--input-color);
     border-radius: 100px;
     padding: 19px 41px 19px 28px;
     display: block;
@@ -177,7 +178,7 @@ body {
 }
 
 .field__input::placeholder {
-    color: #AC907A;
+    color: var(--input-color);
     transition: 0.3s ease;
 }                                                                           
 .field__input:hover::placeholder {
