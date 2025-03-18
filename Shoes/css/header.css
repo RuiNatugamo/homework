@@ -1,0 +1,31 @@
+.header {
+    height: 86px;
+}
+
+.header__inner {
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    line-height: 2.1;
+    text-transform: uppercase;
+}
+
+.header__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 86px;
+    gap: 20px;
+}
+
+.header__list {
+    display: flex;
+    gap: 41px;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+    gap: 10px;
+}
