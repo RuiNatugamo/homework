@@ -29,3 +29,62 @@
     right: 5%;
     gap: 10px;
 }
+
+/*/////// (burger) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.burger-icon {
+    display: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: start;
+    z-index: 12;
+}
+
+.burger-icon span {
+    display: block;
+    height: 3px;
+    width: 30px;
+    border-radius: 100px;
+    background-color: #000;
+    position: relative;
+    transition: 0.4s ease;
+ 
+}
+.burger-icon span::before,
+.burger-icon span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    border-radius: 100px;
+    background-color: #000;
+    transition: 0.4s ease;
+}
+
+.burger-icon span::before {
+    top: -8px;
+}
+
+.burger-icon span::after {
+    bottom: -8px;
+}
+
+.body--opened-menu .burger-icon span::before,
+.body--opened-menu .burger-icon span::after {
+        bottom: 0;
+        top: 0;
+}
+
+.body--opened-menu .burger-icon span::before {
+    transform: rotate(45deg);
+}
+
+.body--opened-menu .burger-icon span::after {
+    transform: rotate(-45deg);
+}
+
+.body--opened-menu .burger-icon span {
+    background-color: transparent;
+}
