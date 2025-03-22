@@ -1,11 +1,13 @@
-const swiper = new Swiper('.preview__slider', {
+const swiper = new Swiper('.swiper', {
 
   slidesPerView: 1,
-  centeredSlides: true,
+  direction: 'vertical',
+  
   
   pagination: {
-    el: '.preview__pagination',
-  
+    el: '.swiper-pagination',
+    clickable: true,
+    
   },
 
 });

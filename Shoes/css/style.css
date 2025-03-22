@@ -1,46 +1,103 @@
-    @import url(header.css);
-    @import url(global.css);
-    @import url(footer.css);
-    @import url(fonts.css);
-    @import url(reset.css);
+        @import url(header.css);
+        @import url(global.css);
+        @import url(footer.css);
+        @import url(fonts.css);
+        @import url(reset.css);
+
+
+/*/////// (1.section) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+    .main__preview{
+        background: linear-gradient(220deg, #c5242c 10%, #ffd000 100%);
+        position: relative;
+    }
+
+    .preview__background img {
+        position: absolute;
+        width: 100%;
+        top: 30%;
+    }
 
     .preview__inner {
+        display: flex; 
+        height: 850px;
+
+    }
+
+    .preview__slider {
         display: flex;
-        position: relative;
+    }
+
+    .preview__container {
+       padding: 0 180px 0 0;
+    }
+
+    .preview__slide {
+        display: flex;
         align-items: center;
-
-        background: linear-gradient(209deg, #e61923 0%, #ffb800 100%);
-        height: 940px;
+        justify-content: center;
     }
 
-    .preview__background {
-        position: absolute;
-        top: 35%;
-    }
-
-    .preview__purchase {
-        position: absolute;
-        inset: 0;
-        top: 86%;
-        left: 80%; 
+    .preview__slide img {
+        background: url(../img/decor/Frame\ 2.svg) no-repeat;
+        background-position-y: 1rem;
+        background-position-x: 7rem;
+        
     }
 
     .preview__button {
+        border: 1.56px solid #fff;
+        padding: 6px 24px;
+        gap: 6px;
+        background: transparent;
+        color: #fff;
         font-size: 20px;
         line-height: 2.5;
-        letter-spacing: 0.08rem;
-        color: #fff;
-        background: transparent;
-        border: 2px solid #fff;
-        padding: 6px 24px;  
+        letter-spacing: 0.08em;
     }
 
-.preview__slider {
-    
-}
+    .preview__slider {
+        width: 1100px;
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
 
-.preview__slide {
-    background: url(../img/decor/Frame\ 2.svg) no-repeat;
-    background-position-y: 3rem ;
-    overflow: hidden;
-}
+    .preview__purchase {
+        display: flex;
+        align-items: end;
+        padding-bottom: 67px;
+    }
+
+    .swiper-pagination {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
+      justify-content: end;
+      padding-left: 20px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 19px;
+        height: 19px;
+        background: transparent ;
+        border: 2px solid #ffffff;
+    
+    }
+
+    .swiper-pagination-bullet-active::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 42%;
+        background-color: #fee9bc;
+        width: 50px;
+        height: 2px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #fee9bc;
+        position: relative;
+        border: 2px solid #fee9bc;    
+        box-shadow: 0 4px 4px 0 #00000065;
+    }
