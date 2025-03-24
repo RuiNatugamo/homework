@@ -9,6 +9,11 @@
 .main__preview{
     background: linear-gradient(220deg, #c5242c 10%, #ffd000 100%);
     position: relative;
+    margin-bottom: 90px;
+}
+
+.preview__container {
+   padding: 0 180px 0 0;
 }
 
 .preview__background {
@@ -29,10 +34,6 @@
 
 .preview__slider {
     display: flex;
-}
-
-.preview__container {
-   padding: 0 180px 0 0;
 }
 
 .preview__slide {
@@ -61,6 +62,7 @@
     line-height: 2.5;
     letter-spacing: 0.08em;
     width: 196px;
+    z-index: 10;
 }
 
 .preview__slider {
@@ -114,12 +116,195 @@
     box-shadow: 0 4px 4px 0 #00000065;
 }
 
+/*/////// (2.section) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.directory__body {
+    position: relative;  
+    margin-bottom: 65px;
+}
+
+.directory__container {
+    padding: 0 96px;
+}
+
+.directory__top {
+    margin-bottom: 40px;
+}
+
+.directory__title {
+    color: var(--general-red-color);
+    font-size: 37px;
+    line-height: 1;
+}
+
+.directory__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.directory__buttons {
+    display: flex;
+    gap: 30px;
+    font-size: 15px;
+    line-height: 2.56;
+    letter-spacing: 0.08em;
+    color: #808080;
+}
+
+.directory__button-filters,
+.directory__button-sort{
+    background: transparent;
+    border: 1.26px solid #dedede;
+    padding: 5px 20px;
+    width: 159px;
+    height: 51px;
+}
+
+.directory__buttons-connected {
+    display: flex;
+}
+
+.directory__buttons-connected img {
+    width: 20px;
+}
+
+.directory__button-options,
+.directory__button-kind {
+    background-color: transparent;
+    border: 1.26px solid #dedede;
+    padding: 0px 20px;
+    width: 57.5px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.directory__slide-top {
+    width: 401px;
+    height: 376px;
+    background-color: #F9F9F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.directory__slide-img img {
+    width: 100%;
+}
+
+.directory__slide-subtitle {
+    line-height: 1.4;
+    letter-spacing: 0.07em;
+    color: #9c9c9c;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.directory__slide-title {
+    font-size: 25px;
+    color: #040404;
+    margin-bottom: 10px;
+}
+
+.directory__slide-price {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.directory__slide-size {
+    color: var(--general-red-color);
+    line-height: 140%;
+    letter-spacing: 0.08em;
+    font-size: 18px;
+}
+
+.directory__prev {
+    position: absolute;
+    background: transparent;
+    top: 45%;
+    left: -1.5%;
+    z-index: 10;
+
+    background-color: #F9F9F9;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+  
+}
+
+.directory__next {
+    position: absolute;
+    background: transparent;
+    top: 45%;
+    right: -1.5%;
+    z-index: 10;
+    transform: rotate(180deg);
+    
+    background-color: #F9F9F9;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+}
+
+.directory__next path,
+.directory__prev path {
+    transition: 0.3s ease;
+}
+
+.swiper-button-disabled {
+    cursor: default;
+}
+.swiper-button-disabled path {
+    fill: #c9c9c9;
+}
+
+.directory__show {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 155px;
+}
+
+.directory__button-show {
+    border: 1.56px solid #808080;
+    padding: 6px 24px;
+    background: transparent;
+    color: #808080;
+    font-size: 20px;
+    line-height: 2.5;
+    letter-spacing: 0.08em;
+}
+
+
 /*/////// (media) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media (max-width: 1800px) {
+    .directory__slider {
+        max-width: 1300px;
+    }
+
+    .directory__next {
+        right: -1%;
+    }
+}
 
 @media (max-width: 1500px) {
     .preview__container {
         padding-right: 40px;
      }
+
+     .directory__slider {
+        max-width: 900px;
+    }
+
+    .directory__next {
+        right: 1%;
+    }
+    .directory__prev {
+        left: -2.5%;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -192,8 +377,25 @@
         border-right: 1.56px solid #000000 ;
     }
 
-/*/////// (footer) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+    .directory__content {
+        flex-direction: column;
+    }
 
+    .directory__title {
+        margin-bottom: 30px;
+    }
+   
+    .directory__slider {
+        max-width: 501px;
+    }
+
+    .directory__slide-top {
+        width: 501px;
+    }
+
+    .directory__next {
+        right: -2.5%;
+    }
 
 }
 
@@ -203,7 +405,15 @@
         max-width: 500px;
       }
 
+      .directory__slider {
+        max-width: 400px;
+    }
 
+    .directory__slide-top {
+        width: 400px;
+    }
+
+/*/////// (footer) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
     .footer__inner {
         display: flex;
@@ -243,13 +453,36 @@
         width: 30px;
     }
 
-/*/////// (footer) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 }
 
 @media (max-width: 600px) {
+
     .swiper-pagination-bullet-active::before {
         width: 0px;
     }
+
+    .directory__container {
+        padding: 0 40px;
+    }
+
+    .directory__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .directory__prev,
+    .directory__next {
+        position: relative;
+    }
+
+    .directory__pagination {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -262,6 +495,22 @@
         border-right: 0;
     } 
 
+    .directory-title {
+        text-align: center;
+    }
+
+    .directory__slider {
+        max-width: 300px;
+    }
+
+    .directory__slide-top {
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .directory__slide-img  {
+        max-width: 220px;
+    }
 /*/////// (footer) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
     .footer__content {
