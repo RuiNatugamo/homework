@@ -118,7 +118,6 @@
 
 /*/////// (2.section) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-
 .directory__body {
     position: relative;  
     margin-bottom: 65px;
@@ -225,7 +224,7 @@
     background: transparent;
     top: 45%;
     left: -1.5%;
-    z-index: 10;
+    z-index: 5;
 
     background-color: #F9F9F9;
     border-radius: 50%;
@@ -239,7 +238,7 @@
     background: transparent;
     top: 45%;
     right: -1.5%;
-    z-index: 10;
+    z-index: 5;
     transform: rotate(180deg);
     
     background-color: #F9F9F9;
@@ -263,7 +262,7 @@
 .directory__show {
     display: flex;
     justify-content: center;
-    margin-bottom: 155px;
+    margin-bottom: 250px;
 }
 
 .directory__button-show {
@@ -274,6 +273,148 @@
     font-size: 20px;
     line-height: 2.5;
     letter-spacing: 0.08em;
+}
+
+/*/////// (3.section) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.quotation__container {
+    padding: 0 40px;
+}
+
+.quotation__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.quotation__body {
+    display: flex;
+    flex-direction: column;
+}   
+
+.quotation__text-1,
+.quotation__text-2 {
+    display: flex;
+    font-size: 5.3vw;
+    line-height: 1.5;
+    gap: 30px;
+    align-items: center;
+}
+
+.quotation__block {
+    position: relative;
+}
+
+.quotation__img-1 img {
+    width: 100%;
+}
+.quotation__img-2 img {
+    width: 100%;
+}
+.quotation__img-3 img {
+    width: 100%;
+}
+
+.quotation__img-1,
+.quotation__img-2,
+.quotation__img-3 {
+    position: absolute;
+}
+
+.quotation__img-1 {
+    bottom: -130%;
+    left: -48%;
+}
+.quotation__img-2 {
+    bottom: -60%;
+    right: -60%;
+}
+.quotation__img-3 {
+    right: -45%;
+    bottom: -60%;
+}
+
+.quotation__square-1,
+.quotation__square-2,
+.quotation__square-3 {
+    border-radius: 42px;
+    height: 89px;
+} 
+
+.quotation__square-1 {
+    width: 197px;
+    background-color: #000;
+}
+.quotation__square-2 {
+    width: 250px;
+    background: #ffb800;
+}
+.quotation__square-3 {
+    width: 178px;
+    background-color: #000;
+}
+
+.quotation__logos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 180px;
+}
+.quotation__content {
+    display: flex;
+    gap: 90px;
+}
+
+.quotation__content img {
+    width: 100%;
+}
+
+/*/////// (4.section) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.brand__content {
+    position: relative;
+}
+
+.brand__top {
+    z-index: 2; 
+}
+
+.brand__airmax {
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 100%;
+}
+
+.brand__nike {
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.brand__nike img {   
+    width: 100%;
+    height: 100%;
+}
+
+.brand__airmax img {
+    width: 100%;
+}
+
+.brand__background img {
+    width: 100%;
+    filter: blur(6px);
+}
+.brand__animated img {
+    
+}
+
+.brand__animated {
+    animation: move 7s infinite linear;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -304,6 +445,24 @@
     }
     .directory__prev {
         left: -2.5%;
+    }
+
+    .quotation__text-1,
+    .quotation__text-2 {
+        font-size: 5vw;
+    }
+   
+    .quotation__block {
+        transform: scale(0.7);
+    }
+
+    .quotation__img-2,
+    .quotation__square-2 {
+        display: none;
+    }
+
+    .quotation__body {
+        align-items: center;
     }
 }
 
@@ -336,18 +495,24 @@
     .header__content {
         justify-content: space-between;
         align-items: center;
-    
     }
 
     .body--opened-menu {
         overflow: hidden;
     } 
 
+    .body--opened-menu .header__search {
+        z-index: -1;
+    }
+    .body--opened-menu .directory__next {
+        z-index: -1;
+    }
+
     .header__nav {
         background-color: #ffffff;
         position: fixed;
         inset: 0;
-        z-index: 10;
+        z-index: 12;
         padding: 20vh 45px 3vh;
         font-size: 24px;
         opacity: 0;
@@ -362,6 +527,7 @@
         visibility: visible;
         transform: translateX(0);
         box-shadow: 1000px 0 0 1000px #0000006c;
+        z-index: 10;
     }
 
     .burger-icon {
@@ -397,6 +563,10 @@
         right: -2.5%;
     }
 
+    .directory__show {
+        margin-bottom: 200px;
+    }
+
 }
 
 @media (max-width: 800px) {
@@ -411,6 +581,20 @@
 
     .directory__slide-top {
         width: 400px;
+    }
+
+    .quotation__text-1,
+    .quotation__text-2 {
+        gap: 0;
+        font-size: 4.8vw;
+    }
+
+    .quotation__block {
+        transform: scale(0.5);
+    }
+
+    .quotation__content {
+        gap: 30px;
     }
 
 /*/////// (footer) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -483,6 +667,28 @@
         padding: 0 20px;
     }
 
+    .directory__show {
+        margin-bottom: 150px;
+    }
+
+    .quotation__body {
+        gap: 10px;
+
+    }
+
+    .quotation__text-1,
+    .quotation__text-2   {
+        gap: 10px;
+        font-size: 35px;
+    }
+
+   .quotation__img-1,
+   .quotation__square-1,
+   .quotation__img-3,
+   .quotation__square-3 {
+    display: none;
+   }
+
 }
 
 @media (max-width: 500px) {
@@ -511,12 +717,21 @@
     .directory__slide-img  {
         max-width: 220px;
     }
+
+    .quotation__text-1,
+    .quotation__text-2   {
+        font-size: 6vw;
+    }
 /*/////// (footer) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
     .footer__content {
         display: flex;
         flex-direction: column;
         gap: 80px;
+    }
+
+    .footer__inner {
+        padding: 0 20px;
     }
 
     .footer__col {
@@ -546,5 +761,14 @@
     }
     100% {
         transform: scaleX(1);
+    }
+}
+
+@keyframes move {
+    0% {
+        translate: 0px;
+    }
+    100% {
+        translate: 1100px;
     }
 }
