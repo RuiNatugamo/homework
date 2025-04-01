@@ -69,7 +69,7 @@
 
   });
 
-  // Аккордено  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Аккорденон //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   const btnOpen = document.querySelector('.accordion__button-open')
   const btnClose = document.querySelector('.accordion__button-close')
@@ -77,20 +77,44 @@
 
 
   const openAccordion = () => {
-    accordionList.classList.add('accordion--open')
+    accordionList.classList.toggle('accordion--open')
+    accordionList.style.maxHeight = accordionList.scrollHeight + 'px'
+
     btnClose.classList.add('show--btn')
     btnOpen.classList.add('hide--btn')
   }
-
+  
   const closeAccordion = () => {
-    accordionList.classList.remove('accordion--open')
+      if (accordionList.classList.contains('button__filters-content--opened')) {
+          accordionList.style.maxHeight = accordionList.scrollHeight + 'px'
+      } else {
+        accordionList.style.maxHeight = null
+      }
+
     btnClose.classList.remove('show--btn')
     btnOpen.classList.remove('hide--btn')
   }
 
   btnOpen.addEventListener('click', openAccordion)
-
   btnClose.addEventListener('click', closeAccordion)
 
+
+// Фильтр  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  const buttonFilters = document.querySelector('.button__filters')
+  const buttonContent = document.querySelector('.button__filters-content')
+
+  const openContent = () => {
+    buttonContent.classList.toggle('button__filters-content--opened')
+    buttonFilters.classList.toggle('button__filters--opened')
+  
+      if (buttonContent.classList.contains('button__filters-content--opened')) {
+         buttonContent.style.maxHeight = buttonContent.scrollHeight + 'px'
+    } else {
+        buttonContent.style.maxHeight = null
+    }
+  }
+
+  buttonFilters.addEventListener('click', openContent)
 
 })()

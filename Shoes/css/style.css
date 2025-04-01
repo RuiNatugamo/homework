@@ -422,7 +422,7 @@
 /*/////// (5.section) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .goods__container {
-    padding: 0 298px;
+    padding: 298px;
 }
 
 .goods__top {
@@ -433,12 +433,13 @@
     color: var(--general-red-color);
     font-size: 37px;
     line-height: 1;
+
 }
 
 .goods__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: ;
     margin-bottom: 85px;
 }
 
@@ -451,13 +452,59 @@
     color: #808080;
 }
 
-.goods__button-filters,
 .goods__button-sort{
     background: transparent;
     border: 1.26px solid #dedede;
     padding: 5px 20px;
     width: 159px;
     height: 51px;
+}
+
+
+.button__filters {
+    background: transparent;
+    border: 1.26px solid #dedede;
+    padding: 5px 20px;
+    width: 159px;
+    height: 51px;
+    cursor: pointer;
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    user-select: none;
+    transition: 0.3s ease;
+}
+
+.button__filters--opened {
+    color: #000;
+}
+
+.button__filters:hover {
+    color: #000;
+}
+
+.button__filters-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s ease;
+    border-bottom: 1.5px solid #dedede;
+    border-top: 0;
+    opacity: 0;
+    padding: 10px;
+}
+
+.button__filters-content--opened {
+    opacity: 1;
+}
+
+.button__filters-item button {
+    width: 100%;
+    text-align: start;
+    padding: 4px;
+    background-color: #0000000a;
 }
 
 .goods__buttons-connected {
@@ -481,15 +528,17 @@
 }
 
 .accordion-list {
-   display: none;
-   opacity: 0;
-}
-
-.accordion--open {
     display: flex;
     justify-content: center;
     gap: 40px;
-    animation: opacity 0.5s both;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    margin-bottom: 120px;
+}
+
+.accordion--open {
+
 }
 
 .accordion-list-2 {
